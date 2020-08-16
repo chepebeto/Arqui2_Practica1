@@ -1,4 +1,6 @@
+import { InformacionService } from './../services/informacion.service';
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(private infoService: InformacionService) {}
+
+  getDatos(){
+    this.infoService.getDatos()
+    .subscribe(misdatos => {
+      console.log(misdatos);
+    });
+  }
 
 }

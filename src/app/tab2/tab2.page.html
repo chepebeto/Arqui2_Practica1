@@ -4,6 +4,42 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>  
-   
+<ion-content>  
+  <ion-card>    
+    <ion-card-header>      
+      <ion-card-subtitle>¿Nivel de Desinfectante?</ion-card-subtitle>      
+      <ion-card-title class="ion-text-center">90%</ion-card-title>      
+    </ion-card-header>
+  </ion-card>
+
+  <ion-grid fixed>   
+   <ion-row>
+     <ion-col>
+      <ion-card color = "success">        
+        <ion-card-content>
+          ALTO  
+        </ion-card-content>
+      </ion-card>
+     </ion-col>
+   </ion-row>
+   <ion-row>
+    <ion-col>
+     <ion-card color = "warning">
+       <ion-card-content>
+         MEDIO
+       </ion-card-content>
+     </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+     <ion-card color ="danger">
+       <ion-card-content>
+         BAJO
+       </ion-card-content>
+     </ion-card>
+    </ion-col>
+  </ion-row>
+    </ion-grid>
+    <ion-button (click)="getDatos()">VERIFICAR DATOS</ion-button>
 </ion-content>
