@@ -11,8 +11,8 @@ export class InformacionService {
   constructor(private http: HttpClient) { }
   
   getDatos(){
-    const path = 'https://jsonplaceholder.typicode.com/todos/1';
-    return this.http.get<Datos>(path);
+    const path = 'http://apip1.herokuapp.com/getDatos';
+    return this.http.get<Datos[]>(path);
   }
 
 }
