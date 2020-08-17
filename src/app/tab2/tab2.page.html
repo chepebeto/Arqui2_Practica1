@@ -6,40 +6,44 @@
 
 <ion-content>  
   <ion-card>    
-    <ion-card-header>      
+    <!--<ion-card-header>      
       <ion-card-subtitle>¿Nivel de Desinfectante?</ion-card-subtitle>      
       <ion-card-title class="ion-text-center">90%</ion-card-title>      
+    </ion-card-header>-->
+    <ion-card-header>      
+      <ion-card-subtitle>¿Nivel de Desinfectante?</ion-card-subtitle>      
+      <ion-card-title class="ion-text-center">
+          <ion-label>{{datosR.nivel_liquido}} - {{datosR.percent_liquido}} %</ion-label>
+      </ion-card-title>
     </ion-card-header>
   </ion-card>
 
-  <ion-grid fixed>   
-   <ion-row>
-     <ion-col>
+  <ion-grid >       
+   <ion-row [ngSwitch]="datosR.nivel_liquido">
+     <ion-col *ngSwitchCase = "'Alto'">
       <ion-card color = "success">        
         <ion-card-content>
           ALTO  
         </ion-card-content>
       </ion-card>
      </ion-col>
-   </ion-row>
-   <ion-row>
-    <ion-col>
-     <ion-card color = "warning">
-       <ion-card-content>
-         MEDIO
-       </ion-card-content>
-     </ion-card>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-     <ion-card color ="danger">
-       <ion-card-content>
-         BAJO
-       </ion-card-content>
-     </ion-card>
-    </ion-col>
-  </ion-row>
-    </ion-grid>
-    <ion-button (click)="getDatos()">VERIFICAR DATOS</ion-button>
+
+     <ion-col *ngSwitchCase = "'Medio'">
+      <ion-card color = "warning">        
+        <ion-card-content>
+          MEDIO  
+        </ion-card-content>
+      </ion-card>
+     </ion-col>
+
+     <ion-col *ngSwitchCase = "'Bajo'">
+      <ion-card color = "danger">        
+        <ion-card-content>
+          BAJO  
+        </ion-card-content>
+      </ion-card>
+     </ion-col>
+   </ion-row>  
+  
+    </ion-grid>    
 </ion-content>
