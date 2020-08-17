@@ -8,17 +8,8 @@ import { Datos } from './../interfaces/datos';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  peso: number = 0;
-  estado_buzon: false;
   datosR: Datos[] = [];
-  datosR2 = [
-    {
-      estado_buzon: false,
-      nivel_liquido: "Bajo",
-      percent_liquido: "15",
-      peso: 0
-    }
-  ];
+  
   constructor(private informacionService: InformacionService) {}
 
   ionViewWillEnter(){

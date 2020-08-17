@@ -7,8 +7,7 @@ import { Datos } from './../interfaces/datos';
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
-export class Tab2Page{
-  semaforo: string= "Medio";
+export class Tab2Page{  
   datosR: Datos[] = [];
   
   constructor(private informacionService: InformacionService) {}

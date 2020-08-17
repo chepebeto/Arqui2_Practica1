@@ -4,14 +4,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-card>    
+<ion-content [ngSwitch]="datosR.estado_buzon" >
+  <ion-card *ngSwitchCase = "false">    
     <ion-img src="assets/img/vacio.png"></ion-img>
     <ion-card-header>      
       <ion-card-subtitle>¿Paquete Actual en Buzón?</ion-card-subtitle>      
       <ion-card-title class="ion-text-center">NO</ion-card-title>
       <ion-card-subtitle>Peso:</ion-card-subtitle>      
-      <ion-card-title class="ion-text-center" >0.0</ion-card-title>      
+      <ion-card-title class="ion-text-center" >{{datosR.peso}}</ion-card-title>      
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card *ngSwitchCase = "true">    
+    <ion-img src="assets/img/lleno.png"></ion-img>
+    <ion-card-header>      
+      <ion-card-subtitle>¿Paquete Actual en Buzón?</ion-card-subtitle>      
+      <ion-card-title class="ion-text-center">SI</ion-card-title>
+      <ion-card-subtitle>Peso:</ion-card-subtitle>      
+      <ion-card-title class="ion-text-center" >{{datosR.peso}}</ion-card-title>      
     </ion-card-header>
   </ion-card>
 
