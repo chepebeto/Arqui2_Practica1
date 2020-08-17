@@ -13,34 +13,26 @@
     <ion-card-header>      
       <ion-card-subtitle>¿Nivel de Desinfectante?</ion-card-subtitle>      
       <ion-card-title class="ion-text-center">
-          <ion-label>{{datosR.nivel_liquido}} - {{datosR.percent_liquido}} %</ion-label>
+          <ion-label>{{datosR.percent_liquido}} %</ion-label>
       </ion-card-title>
     </ion-card-header>
   </ion-card>
 
   <ion-grid >       
    <ion-row [ngSwitch]="datosR.nivel_liquido">
-     <ion-col *ngSwitchCase = "'Alto'">
-      <ion-card color = "success">        
-        <ion-card-content>
-          ALTO  
-        </ion-card-content>
-      </ion-card>
+     <ion-col *ngSwitchCase = "'Alto'">    
+        <ion-img src="assets/img/nivel-alto.png"></ion-img>    
      </ion-col>
 
      <ion-col *ngSwitchCase = "'Medio'">
-      <ion-card color = "warning">        
-        <ion-card-content>
-          MEDIO  
-        </ion-card-content>
+      <ion-card>    
+        <ion-img src="assets/img/nivel-medio.png"></ion-img>
       </ion-card>
      </ion-col>
 
      <ion-col *ngSwitchCase = "'Bajo'">
-      <ion-card color = "danger">        
-        <ion-card-content>
-          BAJO  
-        </ion-card-content>
+      <ion-card>    
+        <ion-img src="assets/img/nivel-bajo.png"></ion-img>
       </ion-card>
      </ion-col>
    </ion-row>  
