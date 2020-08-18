@@ -20,8 +20,11 @@
 
   <ion-grid >       
    <ion-row [ngSwitch]="datosR.nivel_liquido">
+    
      <ion-col *ngSwitchCase = "'Alto'">    
-        <ion-img src="assets/img/nivel-alto.png"></ion-img>    
+      <ion-card (ionViewWillEnter)= "evento()"> 
+        <ion-img src="assets/img/nivel-alto.png"></ion-img>   
+      </ion-card>  
      </ion-col>
 
      <ion-col *ngSwitchCase = "'Medio'">
