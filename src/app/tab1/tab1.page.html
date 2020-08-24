@@ -13,11 +13,11 @@
         <ion-card-title class="ion-text-center">NO</ion-card-title>
         <ion-card-subtitle>¿Paquete Actual en Buzón?</ion-card-subtitle>      
         <div [ngSwitch]="datosR.peso">
-          <ion-card-title class="ion-text-center" *ngSwitchCase = "0.00">NO</ion-card-title>
+          <ion-card-title class="ion-text-center" *ngSwitchCase = "0.00 kg">NO</ion-card-title>
           <ion-card-title class="ion-text-center" *ngSwitchDefault>SI</ion-card-title>
       </div>
         <ion-card-subtitle>Peso:</ion-card-subtitle>      
-        <ion-card-title class="ion-text-center" >{{datosR.peso}}</ion-card-title>      
+        <ion-card-title class="ion-text-center" >{{datosR.peso}} kg</ion-card-title>      
       </ion-card-header>
     </ion-card-content>    
     
@@ -33,7 +33,7 @@
             <ion-card-title class="ion-text-center" *ngSwitchDefault>SI</ion-card-title>
         </div>
           <ion-card-subtitle>Peso:</ion-card-subtitle>      
-          <ion-card-title class="ion-text-center" >{{datosR.peso}}</ion-card-title>      
+          <ion-card-title class="ion-text-center" >{{datosR.peso}} kg</ion-card-title>      
         </ion-card-header>
       </ion-card-content>  
      
