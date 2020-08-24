@@ -6,7 +6,7 @@
 
 <ion-content >
   <ion-card [ngSwitch]="datosR.estado_buzon">
-    <ion-card-content *ngSwitchCase = "true">
+    <ion-card-content *ngSwitchCase = "false">
       <ion-img src="assets/img/buzon-cerrado.png"></ion-img>
       <ion-card-header>            
         <ion-card-subtitle>¿Buzon Abierto?</ion-card-subtitle>      
@@ -22,7 +22,7 @@
     </ion-card-content>    
     
     
-      <ion-card-content *ngSwitchCase = "false">
+      <ion-card-content *ngSwitchCase = "true">
         <ion-img src="assets/img/buzon-abierto.png"></ion-img>
         <ion-card-header>            
           <ion-card-subtitle>¿Buzon Abierto?</ion-card-subtitle>      
