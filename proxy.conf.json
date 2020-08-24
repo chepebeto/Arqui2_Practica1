@@ -1,0 +1,7 @@
+{
+    "/getDatos": {
+        "target": "http://apip1.herokuapp.com",
+        "secure": false,
+        "changeOrigin": true
+    }
+}
