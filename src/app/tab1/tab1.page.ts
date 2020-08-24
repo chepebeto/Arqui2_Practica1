@@ -20,7 +20,7 @@ export class Tab1Page {
 
       let arr = Object.entries(this.datosR);
 
-      if ((arr[0][0]=="peso") && (arr[0][1].toString()!="0")){
+      if ((arr[0][0]=="peso") && (arr[0][1].toString()!="0.00")){
         this.AlertaPaqueteBuzon();
       }
     });

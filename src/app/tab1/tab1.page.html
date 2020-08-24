@@ -13,7 +13,7 @@
         <ion-card-title class="ion-text-center">NO</ion-card-title>
         <ion-card-subtitle>¿Paquete Actual en Buzón?</ion-card-subtitle>      
         <div [ngSwitch]="datosR.peso">
-          <ion-card-title class="ion-text-center" *ngSwitchCase = "'0'">NO</ion-card-title>
+          <ion-card-title class="ion-text-center" *ngSwitchCase = "0.00">NO</ion-card-title>
           <ion-card-title class="ion-text-center" *ngSwitchDefault>SI</ion-card-title>
       </div>
         <ion-card-subtitle>Peso:</ion-card-subtitle>      
@@ -29,7 +29,7 @@
           <ion-card-title class="ion-text-center">SI</ion-card-title>
           <ion-card-subtitle>¿Paquete Actual en Buzón?</ion-card-subtitle>      
           <div [ngSwitch]="datosR.peso">
-            <ion-card-title class="ion-text-center" *ngSwitchCase = "'0'">NO</ion-card-title>
+            <ion-card-title class="ion-text-center" *ngSwitchCase = "0.00">NO</ion-card-title>
             <ion-card-title class="ion-text-center" *ngSwitchDefault>SI</ion-card-title>
         </div>
           <ion-card-subtitle>Peso:</ion-card-subtitle>      
@@ -38,37 +38,5 @@
       </ion-card-content>  
      
   </ion-card>
-
-
-
-
- <!-- <ion-card *ngSwitchCase = "'0'">    
-    <ion-img src="assets/img/vacio.png"></ion-img>
-    <ion-card-header>            
-      <ion-card-subtitle>¿Buzon Abierto?</ion-card-subtitle>      
-      <ion-card-title class="ion-text-center" [ngSwitch]="datosR.estado_buzon">
-        <p *ngSwitchCase = "false">NO</p>
-        <p *ngSwitchCase = "true">SI</p>
-      </ion-card-title>
-      <ion-card-subtitle>Peso:</ion-card-subtitle>      
-      <ion-card-title class="ion-text-center" >{{datosR.peso}}</ion-card-title>      
-    </ion-card-header>
-  </ion-card>
-
-  <ion-card *ngSwitchDefault>    
-    <ion-img src="assets/img/lleno.png"></ion-img>
-    <ion-card-header>            
-      <ion-card-subtitle>¿Buzon Abierto?</ion-card-subtitle>      
-      <ion-card-title class="ion-text-center" [ngSwitch]="datosR.estado_buzon">
-        <h1 *ngSwitchCase = "false">NO</h1>
-        <h1 *ngSwitchCase = "true">SI</h1>
-      </ion-card-title>
-      <ion-card-subtitle>Peso:</ion-card-subtitle>      
-      <ion-card-title class="ion-text-center" >{{datosR.peso}}</ion-card-title>      
-    </ion-card-header>
-  </ion-card>
--->
-  
-
 </ion-content>
 
